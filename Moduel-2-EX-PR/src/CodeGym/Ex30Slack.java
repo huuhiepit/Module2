@@ -407,9 +407,5 @@ public class Ex30Slack {
         }
         return number * factorial(number -1);
 	}
-	
-	//Bài 22: Find the index of the First Occurrence in a String
-	public static int strStr(String haystack, String needle) {
-	
-	}
+
 }
