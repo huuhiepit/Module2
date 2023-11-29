@@ -1,6 +1,8 @@
 package Practice.Inheritance;
 
-public class Circle extends Shape{
+import Exercise.abstracts.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
     private double radius;
     public Circle() {
         this.radius = 1.0;
@@ -40,5 +42,13 @@ public class Circle extends Shape{
 
         circle = new Circle(3.5, "indigo", false);
         System.out.println(circle);
+    }
+
+    @Override
+    public void resize(double percent) {
+        System.out.println("Area: " + this.getArea());
+        System.out.printf("New Area: %.2f",this.getArea() + (this.getArea() * percent / 100));
+        System.out.println();
+
     }
 }

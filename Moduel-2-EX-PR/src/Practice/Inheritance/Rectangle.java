@@ -1,6 +1,8 @@
 package Practice.Inheritance;
 
-public class Rectangle extends Shape{
+import Exercise.abstracts.Resizeable;
+
+public class Rectangle extends Shape implements Resizeable {
     private double width;
     private double length;
 
@@ -53,5 +55,12 @@ public class Rectangle extends Shape{
 
         rectangle = new Rectangle("orange", true, 2.5, 4.3);
         System.out.println(rectangle);
+    }
+
+    @Override
+    public void resize(double percent) {
+        System.out.println("Area: " + this.getArea());
+        System.out.printf("New Area: %.2f", this.getArea() + (this.getArea() * percent / 100));
+        System.out.println();
     }
 }
